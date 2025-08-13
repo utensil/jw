@@ -171,7 +171,7 @@ fn checksum_rayon(options: &Options, algorithm: &HashAlgorithm) {
                 .filter_map(|file_path| {
                     hash_file!(algorithm, &file_path)
                         .map(|hash| {
-                            println!("{}{}", file_path, hash);
+                            println!("{}{}", hash, file_path);
                             (file_path, hash)
                         })
                         .ok()
